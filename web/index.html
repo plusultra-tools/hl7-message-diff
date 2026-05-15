@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HL7 Message Diff — semantic diff for HL7 v2 messages, in your browser</title>
+  <meta name="description" content="Diff two HL7 v2 messages field-by-field with semantic labels. No upload, no server, no PHI leaves your browser." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>HL7 Message Diff</h1>
+    <p class="tagline">Field-by-field diff for HL7 v2 messages, with semantic labels. <strong>Runs entirely in your browser</strong> — no upload, no server, no PHI ever leaves this page.</p>
+  </header>
+
+  <main>
+    <section class="inputs">
+      <div class="pane">
+        <label for="msg-a">Message A</label>
+        <textarea id="msg-a" placeholder="Paste first HL7 v2 message here..." spellcheck="false"></textarea>
+      </div>
+      <div class="pane">
+        <label for="msg-b">Message B</label>
+        <textarea id="msg-b" placeholder="Paste second HL7 v2 message here..." spellcheck="false"></textarea>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="run-diff" type="button">Diff</button>
+      <button id="load-sample" type="button">Load sample</button>
+      <button id="clear" type="button">Clear</button>
+    </section>
+
+    <section class="output">
+      <h2>Diff result</h2>
+      <div id="diff-output" aria-live="polite">
+        <p class="hint">Paste two HL7 v2 messages above and click <strong>Diff</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Open source under MIT. CLI version: <code>pip install hl7-message-diff</code>.
+      <a href="https://github.com/example/hl7-message-diff">GitHub</a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
